@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Back In Town</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+      input, select { width: auto }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <span class="brand">Back In Town</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="span4">
+                <form>
+                    <p>
+                        I want to know when the
+                        <select id="search-team" /></select>
+                        are playing within
+                        <select id="search-distance">
+                            <option value="25">25</option>
+                            <option value="100" selected>100</option>
+                            <option value="250">250</option>
+                        </select>
+                        <select id="search-unit">
+                            <option value="mi">miles</option>
+                            <option value="km">kilometers</option>
+                        </select>
+                        of 
+                        <input type="text" id="search-zip" size="5" maxlength="5" placeholder="ZIP code" value="" />.
+                    </p>
+                    <p>
+                        <input type="submit" class="btn btn-inverse" value="Tell Me">
+                    </p>
+                </form>
+            </div>
+            <div class="span8">
+            
+                <div id="message"></div>
+                
+                <table class="table table-striped" style="display:none">
+                    <thead>
+                        <tr>
+                            <th>Date &amp; Time</th>
+                            <th>Game</th>
+                            <th>Tickets</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <hr>
+        <footer>
+            <p>Built with the <a href="http://platform.seatgeek.com/" target="_blank">SeatGeek API</a>, <a href="http://jquery.com" target="_blank">jQuery</a>, <a href="http://underscorejs.org/" target="_blank">Underscore.js</a>, <a href="http://www.datejs.com/">Datejs</a>, and <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>.</p>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
+    <script type="text/javascript" src="js/intown.js"></script>
+
+</body>
+</html>
