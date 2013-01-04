@@ -57,7 +57,7 @@ $(function(){
         var date = new Date(Date.parse(event.datetime_local));
         
         return "<tr>" +
-        "<td>" + date.toString("MMM d, yyyy") + "<br>" + date.toString("h:mm tt") + "</td>" +
+        "<td>" + date.toString("ddd, MMM d, yyyy") + "<br>" + date.toString("h:mm tt") + "</td>" +
             "<td><strong>" + event.title + "</strong><br><em><a href=\"https://maps.google.com/?q=" + event.venue.location.lat + "," + event.venue.location.lon + "\" target=\"_blank\">" + event.venue.name + "</a></em><br>" + event.venue.city + ", " + event.venue.state + "</td>" +
             "<td><a href=\"" + event.url + "\" target=\"_blank\">Buy</a></td>" +
             "</tr>";
